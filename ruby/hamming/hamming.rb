@@ -3,6 +3,6 @@ class Hamming
 
   def self.compute(str_a, str_b)
     raise ArgumentError if str_a.length != str_b.length
-    str_a.split('').zip(str_b.split('')).count{ |pair| pair.first != pair.last }
+    str_a.chars.zip(str_b.chars).count{ |a, b| a != b }
   end
 end
